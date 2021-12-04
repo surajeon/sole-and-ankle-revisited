@@ -32,6 +32,16 @@ const Wrapper = styled.div`
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
+  
+  /* laptop */
+  @media () {
+
+  }
+
+  /* tablet */
+  @media (max-width:950px) {
+    display: none;
+  }
 `;
 
 const MarketingMessage = styled.span`
