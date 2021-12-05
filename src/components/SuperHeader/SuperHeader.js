@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS } from '../../constants';
+import { COLORS, QUERIES } from '../../constants';
 
 import SearchInput from '../SearchInput';
 import UnstyledButton from '../UnstyledButton';
@@ -39,7 +39,7 @@ const Wrapper = styled.div`
   }
 
   /* tablet */
-  @media (max-width:950px) {
+  @media ${QUERIES.tabletAndSmaller} {
     display: none;
   }
 `;
