@@ -52,6 +52,10 @@ const Nav = styled.nav`
   display: flex;
   gap: 48px;
   margin: 0px 48px;
+
+  @media (max-width:950px) {
+    display: none;
+  }
 `;
 
 const Side = styled.div`
