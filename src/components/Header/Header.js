@@ -39,18 +39,18 @@ const Header = () => {
               Open cart
             </VisuallyHidden>
           </ShoppingBagButton>
-          <ShoppingBagButton>
+          <UnstyledButton>
             <Icon id="search" />
             <VisuallyHidden>
               Search
             </VisuallyHidden>
-          </ShoppingBagButton>
-          <ShoppingBagButton>
+          </UnstyledButton>
+          <UnstyledButton onClick={() => setShowMobileMenu(true)}>
             <Icon id="menu" />
             <VisuallyHidden>
               Menu
             </VisuallyHidden>
-          </ShoppingBagButton>
+          </UnstyledButton>
         </MobileActions>
       </MainHeader>
       <Filler />
