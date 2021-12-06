@@ -21,9 +21,9 @@ const Header = () => {
     <header>
       <SuperHeader />
       <MainHeader>
-          <LogoWrapper>
-            <Logo />
-          </LogoWrapper>
+        <LogoWrapper>
+          <Logo />
+        </LogoWrapper>
         <DesktopNav>
           <NavLink href="/sale">Sale</NavLink>
           <NavLink href="/new">New&nbsp;Releases</NavLink>
@@ -52,8 +52,8 @@ const Header = () => {
             </VisuallyHidden>
           </UnstyledButton>
         </MobileActions>
+        <Filler />
       </MainHeader>
-      <Filler />
       <MobileMenu
         isOpen={showMobileMenu}
         onDismiss={() => setShowMobileMenu(false)}
@@ -66,8 +66,9 @@ const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
-  height: 72px;
+  // height: 72px; * unnecessary
   border-bottom: 1px solid ${COLORS.gray[300]};
+  overflow: auto;
 
   @media ${QUERIES.tabletAndSmaller} {
     justify-content: space-between;
@@ -82,7 +83,8 @@ const MainHeader = styled.div`
 
 const DesktopNav = styled.nav`
   display: flex;
-  gap: 48px;
+  // gap: 48px;
+  gap: clamp(1rem, 9.2vw - 4.5rem, 3.5rem);
   margin: 0px 48px;
 
   @media ${QUERIES.tabletAndSmaller} {
@@ -114,6 +116,7 @@ const ShoppingBagButton = styled(UnstyledButton)`
 
 const Filler = styled.div`
   flex: 1;
+  
   @media ${QUERIES.tabletAndSmaller} {
     display: none;
   }
